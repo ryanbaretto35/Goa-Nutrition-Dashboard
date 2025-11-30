@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Nutrition Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Goa Nutrition Dashboard</h1>
+
+        <div class="calculator">
+            <h2>Smart Recipe Calculator</h2>
+
+            <label for="recipe">Select Recipe:</label>
+            <select id="recipe">
+                <option value="" disabled selected>Select a recipe</option>
+                <option value="fishCurry">Goan Fish Curry (Xitti Kodi)</option>
+                <option value="porkVindaloo">Pork Vindaloo</option>
+                <option value="chickenXacuti">Chicken/Mutton Xacuti</option>
+                <option value="prawnBalchao">Prawn Balchão</option>
+                <option value="chickenCafreal">Chicken Cafreal</option>
+                <option value="sorpotel">Sorpotel</option>
+                <option value="sanna">Sanna (Rice cakes)</option>
+                <option value="goanRedRice">Goan Red Rice</option>
+                <option value="chorisPao">Choris Pão (Pork sausage bread)</option>
+                <option value="rosOmelette">Ros Omelette</option>
+                <option value="ravaFriedFish">Rava Fried Fish</option>
+                <option value="crabXecXec">Crab Xec Xec</option>
+                <option value="bebinca">Bebinca</option>
+                <option value="dodol">Dodol</option>
+                <option value="solKadhi">Sol Kadhi (Drink)</option>
+                <option value="feniUrrak">Feni & Urrak (Spirits)</option>
+            </select>
+
+            <label for="servings">Number of Servings:</label>
+            <input type="number" id="servings" value="1" min="1">
+
+            <button id="calculate">Calculate Nutrition</button>
+            <button id="reset">Reset</button>
+
+            <div id="result">
+                <p><strong>Calories:</strong> <span id="calories">0</span> kcal</p>
+                <p><strong>Protein:</strong> <span id="protein">0</span> g</p>
+                <p><strong>Carbs:</strong> <span id="carbs">0</span> g</p>
+                <p><strong>Fat:</strong> <span id="fat">0</span> g</p>
+            </div>
+        </div>
+
+        <div class="charts">
+            <h2>Nutrition Breakdown</h2>
+            <canvas id="nutritionChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
